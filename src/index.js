@@ -6,12 +6,14 @@ import * as serviceWorker from './serviceWorker'
 import Connexion from './Components/Connexion'
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import NotFound from './Components/NotFound'
 
 const Root = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path='/' component={Connexion}/>
             <Route path='/pseudo/:pseudo' component={App}/>
+            <Route component={NotFound}/>
         </Switch>
     </BrowserRouter>
 )
